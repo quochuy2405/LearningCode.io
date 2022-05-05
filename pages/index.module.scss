@@ -1,0 +1,174 @@
+.heading {
+  text-align: center;
+}
+
+.intro {
+  background-image: url('../public/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 110vh;
+  object-fit: contain;
+}
+
+.introText {
+  height: 60%;
+  flex: 4;
+  display: flex;
+  padding: 4%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.introMS {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.8rem;
+}
+
+.introContent {
+  line-height: 4rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.getStated {
+  display: flex;
+  align-items: center;
+  height: 80%;
+}
+
+.iconUseComputer {
+  flex: 6;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  & img {
+    transform: scale(1.2);
+    object-fit: contain;
+    animation: fadeLeft 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+}
+
+.btnGetStarted {
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+  height: 50px;
+  padding: 0 40px;
+  line-height: 50px;
+  margin: 20px 0;
+  color: black;
+  border-radius: 4px;
+  border: 2px solid var(--color-text-default);
+  background-color: var(--color-text-default);
+  transition: all linear 0.2s;
+
+  &:hover {
+    transform: scale(0.96);
+    transition: all linear 0.2s;
+    background-color: transparent;
+    color: white;
+  }
+}
+
+.overView {
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+}
+
+.PlanContent {
+  color: var(--color-text);
+  text-align: center;
+  line-height: 2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.textSmall {
+  font-size: 2rem;
+  font-family: 'Satisfy', cursive;
+  color: var(--color-text);
+}
+
+.textTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.textDescription {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.listPlan {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+}
+
+.Plan {
+  flex-basis: 20%;
+  height: 300px;
+  background: linear-gradient(to right, #39353ccf 50%, rgba(255, 252, 252, 0.973) 0%) left;
+  background-size: 200%;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  border: 2px solid rgb(116, 116, 116);
+
+  &:hover {
+    background-position: right;
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    cursor: pointer;
+    color: black;
+
+    & .imgPlan {
+      transform: rotate(360deg);
+      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+  }
+}
+
+.imgPlan {
+  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.titlePlan {
+  font-weight: 700;
+  padding: 2%;
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.descriptionPlan {
+  padding: 2%;
+  border-top: 2px solid rgba(255, 79, 79, 0.793);
+  text-align: center;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0.6;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
