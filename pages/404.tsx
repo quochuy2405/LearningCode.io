@@ -1,13 +1,12 @@
-import React from 'react'
-import { Metadata } from '@/components'
-import Notfound from '@/public/NotFound.svg'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiArrowLeft } from 'react-icons/fi'
-import type { NextPage } from '@/types/next'
 import Styles from './404.module.scss'
+import type { NextPage } from '@/types/next'
+import { Metadata } from '@/components'
+import { NotFound } from '@/public/SVG'
+import { FiArrowLeft } from 'react-icons/fi'
 
-const NotFound: NextPage = () => {
+const NotFound404: NextPage = () => {
   return (
     <div className={Styles.background}>
       <Metadata title="404 - Learning Code" description="Không có gì ở đây cả 😡" />
@@ -16,10 +15,10 @@ const NotFound: NextPage = () => {
           <FiArrowLeft />
           <Link href="/"> Go To Home</Link>
         </div>
-        <Image src={Notfound} alt="notfound" />
+        <Image src={NotFound} alt="notfound" />
       </div>
     </div>
   )
 }
 
-export default NotFound
+export default NotFound404

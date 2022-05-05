@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Header, Metadata } from '@/components'
-import IconComputer from '@/public/userCom.svg'
 import Image from 'next/image'
-import PlanStack from '@/public/PlanStack.svg'
-import type { NextPage } from '@/types/next'
 import Styles from '@/pages/index.module.scss'
-
+import classnames from 'clsx'
+import type { NextPage } from '@/types/next'
+import { Header, Metadata, Footer } from '@/components'
+import { PlanStack, IconComputer } from '@/public/SVG'
+import { ReactContext, DotNet } from '@/public/Image'
 const overViewItems = [
   {
     imagePlan: PlanStack,
@@ -70,6 +70,25 @@ const Home: NextPage = () => {
           ))}
         </div>
       </div>
+      <div className={classnames(Styles.overView, Styles.tipTrick)}>
+        <div className={Styles.PlanContent}>
+          <p className={Styles.textSmall}>All Tips</p>
+          <p className={Styles.textTitle}>Got all my own tips and tricks</p>
+          <p className={Styles.textDescription}>
+            Problem trying to resolve the confilct Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cumque dolorem velit praesentium cum
+          </p>
+        </div>
+
+        <div className={Styles.listPlan}>
+          <div className={Styles.productMain}>
+            <Image src={ReactContext} alt="ReactContext" />
+          </div>
+          <div className={Styles.productMain}>
+            <Image src={DotNet} alt="DotNet" />
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   )
 }
