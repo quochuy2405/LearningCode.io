@@ -1,0 +1,89 @@
+.Filters {
+  width: 20%;
+  height: 400px;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 2px black;
+  display: flex;
+  flex-direction: column;
+}
+.filterTitle {
+  background-color: var(--color-main);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  line-height: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+.listFilter {
+  width: 100%;
+  flex: 1;
+  padding: 1rem;
+  overflow-y: scroll;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+.filterItem {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 2.5rem;
+  font-size: 1.3rem;
+  align-items: center;
+  gap: 10px;
+}
+.checkBoxMark {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked {
+      & ~ .checkMark {
+        background-color: var(--color-main);
+      }
+      & ~ .checkMark:after {
+        display: block;
+      }
+    }
+  }
+  &:hover {
+    & input ~ .checkMark {
+      box-shadow: 0px 0px 0px 1px rgb(114, 114, 114);
+    }
+  }
+}
+.checkMark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 4px;
+  &:after {
+    background-image: url('https://pic.onlinewebfonts.com/svg/img_76591.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: none;
+  }
+}

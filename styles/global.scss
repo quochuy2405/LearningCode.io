@@ -7,3 +7,25 @@ body {
   font-family: var(--font-poppins);
   background-color: var(--color-page-background);
 }
+
+/* width */
+*::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border: 1px solid rgb(151, 151, 151);
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: rgb(140, 140, 140);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}

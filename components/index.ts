@@ -1,3 +1,5 @@
 export { default as Header } from './Header'
 export { default as Metadata } from './Metadata'
 export { default as Footer } from './Footer'
+export { default as Filters } from './Filter'
+export { default as ItemTopic } from './ItemTopic'

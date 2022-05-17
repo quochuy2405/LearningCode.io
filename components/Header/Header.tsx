@@ -12,7 +12,7 @@ const links = [
   },
   {
     name: 'Product',
-    link: '/product'
+    link: '/products'
   },
   {
     name: 'Tips and Trick',

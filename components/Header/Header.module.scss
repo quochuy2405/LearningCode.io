@@ -5,7 +5,7 @@
   align-items: center;
   padding: 0 40px;
   font-weight: 700;
-  position: fixed;
+  position: sticky;
   z-index: 1000;
   top: 0;
   transition: all ease-in-out 0.2s;
@@ -24,8 +24,8 @@
   align-items: center;
   font-size: 1.6rem;
   font-weight: bold;
-  color: var(--color-text-default);
-  text-shadow: 0.5px 1px var(--color-text-default);
+  color: black;
+  text-shadow: 0.5px 1px var(--color-text-reverse);
 }
 
 .navLinks {
@@ -34,24 +34,26 @@
   flex: 2;
   justify-content: center;
   gap: 0 20px;
-  color: var(--color-text-default);
+  color: var(--color-text-reverse);
 }
 
 .active.active a {
-  border-bottom: 3px solid white;
-  color: rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .navLink {
   & a {
     display: flex;
     text-decoration: none;
+    font-size: 0.95rem;
     color: inherit;
+    font-weight: 600;
     line-height: 30px;
-    color: rgb(205, 205, 205);
+    color: rgb(73, 73, 73);
 
     &:hover {
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
     }
   }
 }
@@ -59,6 +61,21 @@
 .onTop {
   transition: all ease-in-out 0.2s;
   background-color: rgba(33, 33, 33, 0.378);
+  & .navLink {
+    & a {
+      color: rgb(216, 216, 216);
+      &:hover {
+        color: var(--color-text-reverse);
+      }
+    }
+    &.active a {
+      border-bottom: 3px solid rgb(0, 0, 0);
+      color: var(--color-text-reverse);
+    }
+  }
+  .groupButton {
+    color: var(--color-text-reverse);
+  }
 }
 
 .groupButton {
@@ -86,7 +103,7 @@
   color: black;
   border-radius: 4px;
   border: 2px solid var(--color-text-default);
-  background-color: var(--color-text-default);
+  background-color: var(--color-text-reverse);
   transition: all linear 0.2s;
 
   & svg {
@@ -98,7 +115,7 @@
     transform: scale(0.95);
     transition: all linear 0.2s;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
 
     & svg {
       padding-left: 6px;
