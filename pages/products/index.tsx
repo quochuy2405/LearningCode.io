@@ -1,61 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
-import { Header, Metadata, Filters } from '@/components'
+import { Header, Metadata, Filters, ItemTopic, Footer } from '@/components'
 import type { FilterItem } from '@/types/inferface'
-import React from 'react'
 import Styles from './Products.module.scss'
 
 const listFilter: Array<FilterItem> = [
   {
-    title: 'react'
+    title: 'REACTJS'
   },
   {
-    title: 'react'
+    title: 'ASP.NET'
   },
   {
-    title: 'react'
+    title: 'LARAVEL'
   },
   {
-    title: 'react'
+    title: 'NODEJS'
   },
   {
-    title: 'react'
+    title: 'JAVASCRIPT'
   },
   {
-    title: 'react'
+    title: 'TYPESCRIPT'
   },
   {
-    title: 'react'
+    title: 'HTML'
   },
   {
-    title: 'react'
+    title: 'CSS'
   },
   {
-    title: 'react'
-  },
-  {
-    title: 'react'
-  },
-  {
-    title: 'react'
-  },
-  {
-    title: 'react'
-  },
-  {
-    title: 'react'
-  },
-  {
-    title: 'react'
-  },
-  {
-    title: 'react'
-  },
-  {
-    title: 'react'
+    title: 'SCSS'
   }
 ]
 
-const Products = () => {
+const Products = (): JSX.Element => {
   return (
     <div>
       <Metadata title="Liên hệ - Learning Code" description="Liên hệ - Learning Code" />
@@ -86,9 +64,14 @@ const Products = () => {
               <Filters title={'Types'} listFilter={listFilter} />
             </div>
           </div>
-          <div className={Styles.Programs}></div>
+          <div className={Styles.Programs}>
+            {new Array(10).fill('').map(({ index }) => (
+              <ItemTopic key={index} />
+            ))}
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

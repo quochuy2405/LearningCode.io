@@ -27,8 +27,8 @@
   margin: auto 0;
   color: black;
   border-radius: 4px;
-  border: 2px solid var(--color-text-default);
-  background-color: var(--color-text-default);
+  border: 2px solid var(--color-text-reverse);
+  background-color: var(--color-text-reverse);
   transition: all linear 0.2s;
 
   & a,

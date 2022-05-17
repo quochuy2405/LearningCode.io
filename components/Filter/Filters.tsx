@@ -5,6 +5,7 @@ const Filters = ({ title, listFilter }: { title: string; listFilter: Array<Filte
   return (
     <div className={Styles.Filters}>
       <p className={Styles.filterTitle}>{title}</p>
+
       <div className={Styles.listFilter}>
         {listFilter?.map((item) => (
           <div className={Styles.filterItem} key={item.title}>
