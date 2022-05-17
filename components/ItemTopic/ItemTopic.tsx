@@ -1,6 +1,4 @@
-import React from 'react'
-
-const ItemTopic = () => {
+const ItemTopic = (): JSX.Element => {
   return <div></div>
 }
 

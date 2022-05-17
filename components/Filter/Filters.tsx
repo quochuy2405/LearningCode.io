@@ -1,5 +1,6 @@
 import type { FilterItem } from '@/types/inferface'
 import Styles from './Filters.module.scss'
+
 const Filters = ({ title, listFilter }: { title: string; listFilter: Array<FilterItem> }): JSX.Element => {
   return (
     <div className={Styles.Filters}>
